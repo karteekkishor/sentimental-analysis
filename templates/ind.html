@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sentiment Analysis</title>
+<style>
+    body {
+        background-image: url('https://www.telstra.com.au/content/dam/shared-component-assets/tecom/articles/elevate-your-cx/customer-service-1200x675.png');
+        background-size: 130% auto;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: white;
+    }
+    
+    input {
+        width: 20%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/predict" method="post">
+        <input type="text" placeholder="Enter Text..." name="q1" /><br>
+        <input type="submit" value="Analyze">
+    </form>
+    <h2>Analysis Result:</h2>
+    <h4>Input Text: {{ d }}</h4>
+    <p><strong>Sentiment: {{ sentiment }}</strong></p>
+</body>
+</html>
